@@ -54,3 +54,7 @@ int main() {
 
     return 0;
 }
+// mestre, tentei fazer o código da forma mais limpa possível e de uma maneira que realmente parecesse uma interação com o usuário. o nome da cidade não aceita espaços,
+// pesquisei e vi que é necessário outro tipo de comando para isso mas não arrisquei tentar usá-lo pois as instruções da atividade pedem para manter as coisas
+// simples com os aprendizados do nível novato. confesso que estou incomodado do nome da cidade não aceitar espaços. era pra ficar assim mesmo? pode me dar um feedback?
+// obrigado!
