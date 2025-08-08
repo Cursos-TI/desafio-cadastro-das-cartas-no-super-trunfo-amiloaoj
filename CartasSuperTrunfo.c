@@ -1,15 +1,15 @@
 #include <stdio.h>
 
 int main() {
-
+    // definição das variáveis
     char estado1, estado2, codigo1[4], codigo2[4], nome1[20], nome2[20];
     int popul1, popul2, turis1, turis2;
     float area1, area2, pib1, pib2;
-
+    // mensagem de boas-vindas e introdução
     printf("Seja bem vindo ao Super Trunfo: Países em C! :D\n\n");
     printf("Neste Brasil fictício, teremos 8 estados e 4 cidades em cada estado.\n");
     printf("Vamos adicionar duas cidades. Comece adicionando os dados da primeira carta!\n");
-
+    // dados da primeira carta
     printf("Digite uma letra de A a H correspondente ao Estado: ");
     scanf(" %c", &estado1);
 
@@ -30,6 +30,27 @@ int main() {
 
     printf("Última característica! Quantos pontos turísticos ela possui? ");
     scanf(" %i", &turis1);
+    // dados da segunda carta
+    printf("Muito bem, agora vamos adicionar a segunda carta do nosso jogo.\n Digite a letra correspondente ao Estado: ");
+    scanf(" %c", &estado2);
+
+    printf("Agora o código da segunda carta: ");
+    scanf(" %s", codigo2);
+
+    printf("Qual o nome da cidade? ");
+    scanf(" %s", nome2);
+
+    printf("Quantos habitantes residem nela? ");
+    scanf(" %i", &popul2);
+
+    printf("Qual sua área em km²? ");
+    scanf(" %f", &area2);
+
+    printf("Qual o PIB? ");
+    scanf(" %f", &pib2);
+
+    printf("Por fim, quantos pontos turísticos ela possui? ");
+    scanf(" %i", &turis2);
 
     return 0;
 }
