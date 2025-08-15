@@ -64,6 +64,10 @@ int main() {
     densip1 = (float) popul1 / area1;
     densip2 = (float) popul2 / area2;
 
+    // cálculos de super-poder
+    float superpoder1 = area1 + (float) popul1 + pib1 + pibpc1 + (float) turis1 + (1 / densip1);
+    float superpoder2 = area2 + (float) popul2 + pib2 + pibpc2 + (float) turis2 + (1 / densip2);
+
     // exibição das cartas
     printf("\n Muito bem! Vamos ver as cartas cadastradas:\n");
 
@@ -75,7 +79,8 @@ int main() {
     printf("%.0fkm² \n", area1);
     printf("%i pontos turísticos. \n", turis1);
     printf("PIB per Capita: R$%.2f \n", pibpc1);
-    printf("Densidade Populacional: %.2f hab/km² \n \n", densip1);
+    printf("Densidade Populacional: %.2f hab/km² \n", densip1);
+    printf("Super Poder: %.2f \n \n", superpoder1);
 
     printf("--------CARTA 2--------\n");
     printf("CÓDIGO: %s - - ESTADO: %c \n", codigo2, estado2);
@@ -85,7 +90,27 @@ int main() {
     printf("%.0fkm². \n", area2);
     printf("%i pontos turísticos. \n", turis2);
     printf("PIB per Capita: R$%.2f \n", pibpc2);
-    printf("Densidade Populacional: %.2f hab/km² \n \n", densip2);
+    printf("Densidade Populacional: %.2f hab/km² \n", densip2);
+    printf("Super Poder: %.2f \n \n", superpoder2);
+
+    // comparação das cartas - simplificado como exigido
+    int resultadoPopul = popul1 > popul2;
+    int resultadoArea = area1 > area2;
+    int resultadoPib = pib1 > pib2;
+    int resultadoPibpc = pibpc1 > pibpc2;
+    int resultadoTuris = turis1 > turis2;
+    int resultadoDensip = densip1 < densip2;
+    int resultadoSuperpoder = superpoder1 > superpoder2;
+
+    printf("Agora, vamos comparar as cartas!\n");
+    printf("1 é vítória da carta 1, 0 é vitória da carta 2.\n");
+    printf("População: %d\n", resultadoPopul);
+    printf("Área: %d\n", resultadoArea);
+    printf("PIB: %d\n", resultadoPib);
+    printf("PIB per Capita: %d\n", resultadoPibpc);
+    printf("Pontos Turísticos: %d\n", resultadoTuris);
+    printf("Densidade Populacional: %d\n", resultadoDensip);
+    printf("Super Poder: %d\n", resultadoSuperpoder);
 
     return 0;
 }
