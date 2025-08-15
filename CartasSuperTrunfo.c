@@ -3,7 +3,8 @@
 int main() {
     // definição das variáveis
     char estado1, estado2, codigo1[4], codigo2[4], cidade1_nome[50], cidade2_nome[50];
-    int popul1, popul2, turis1, turis2;
+    int turis1, turis2;
+    unsigned long int popul1, popul2;
     float area1, area2, pib1, pib2, pibpc1, pibpc2, densip1, densip2; // pibpc = pib per capita; densip = densidade populacional
 
     // mensagem de boas-vindas e introdução
@@ -23,7 +24,7 @@ int main() {
     getchar();
 
     printf("Quantos habitantes ela possui? ");
-    scanf(" %i", &popul1);
+    scanf(" %lu", &popul1);
 
     printf("Qual sua área em km²? ");
     scanf(" %f", &area1);
@@ -47,7 +48,7 @@ int main() {
     getchar();
 
     printf("Quantos habitantes residem nela? ");
-    scanf(" %i", &popul2);
+    scanf(" %lu", &popul2);
 
     printf("Qual sua área em km²? ");
     scanf(" %f", &area2);
@@ -65,8 +66,8 @@ int main() {
     densip2 = (float) popul2 / area2;
 
     // cálculos de super-poder
-    float superpoder1 = area1 + (float) popul1 + pib1 + pibpc1 + (float) turis1 + (1 / densip1);
-    float superpoder2 = area2 + (float) popul2 + pib2 + pibpc2 + (float) turis2 + (1 / densip2);
+    float superpoder1 = area1 + (float) popul1 + pib1 + pibpc1 + (float) turis1 + (1.0 / densip1);
+    float superpoder2 = area2 + (float) popul2 + pib2 + pibpc2 + (float) turis2 + (1.0 / densip2);
 
     // exibição das cartas
     printf("\n Muito bem! Vamos ver as cartas cadastradas:\n");
@@ -74,7 +75,7 @@ int main() {
     printf("--------CARTA 1--------\n");
     printf("CÓDIGO: %s - - ESTADO: %c \n", codigo1, estado1);
     printf("- - %s - - \n", cidade1_nome);
-    printf("HAB: %i \n", popul1);
+    printf("HAB: %lu \n", popul1);
     printf("PIB: R$ %.2f \n", pib1);
     printf("%.0fkm² \n", area1);
     printf("%i pontos turísticos. \n", turis1);
@@ -85,7 +86,7 @@ int main() {
     printf("--------CARTA 2--------\n");
     printf("CÓDIGO: %s - - ESTADO: %c \n", codigo2, estado2);
     printf("- - %s - - \n", cidade2_nome);
-    printf("HAB: %i \n", popul2);
+    printf("HAB: %lu \n", popul2);
     printf("PIB: R$ %.2f \n", pib2);
     printf("%.0fkm². \n", area2);
     printf("%i pontos turísticos. \n", turis2);
